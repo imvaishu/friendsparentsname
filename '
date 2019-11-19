@@ -7,7 +7,7 @@ const main = function(){
   readFile  = readFile.split('\n').slice(0,-1);
 
   const newData = readFile.reduce(createObject,{});
-  const result = readFile.reduce(getParentsNameOfBF,newData); 
+  const result = readFile.map(getParentsNameOfBF(newData)); 
   console.log(result);
 }
 

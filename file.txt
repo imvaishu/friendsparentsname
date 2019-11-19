@@ -2,4 +2,4 @@ Priyanshu,Sahil,Shanti,Ragini
 Rashmi,Pallav,Pallavi,Pallabi
 Sita,Janaka,Janaki,Rashmi
 Ragini,Rajender,Tejinder,Priyanshu
-Pallabi,Satyan,Subha,Priyanshu
+Pallabi,Satyan,Subha,Sita
