@@ -1,14 +1,10 @@
-const fs = require('fs');
-const createObject = require("./src/createObjectOfFile.js").createObject;
-const getParentsNameOfBF = require("./src/getParentsNameOfBF.js").getParentsNameOfBF;
+const parentsNameOfBF = require('./src/parentsNameOfBF.js').parentsNameOfBF;
 
 const main = function(){
-  let readFile = fs.readFileSync("./src/file.txt","utf-8");
-  readFile  = readFile.split('\n').slice(0,-1);
+  const name = process.argv[2];
 
-  const newData = readFile.reduce(createObject,{});
-  const result = readFile.reduce(getParentsNameOfBF,newData); 
-  console.log(result);
-}
+  const parentsName  = parentsNameOfBF(name);
+  console.log(parentsName);
+};
 
 main();
