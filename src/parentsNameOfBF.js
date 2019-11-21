@@ -1,15 +1,13 @@
-const fs = require('fs');
-const createObject = require('./createObjectOfFile.js').createObject;
+const fs = require("fs");
+const updateFriendsDetails = require("./updateFriendsDetails.js")
+  .updateFriendsDetails;
 
-const parentsNameOfBF = function(name){
-  let personDetails = fs.readFileSync('./file.txt','utf-8');
-  personDetails = personDetails.split('\n').slice(0,-1);
-
-  personDetails = personDetails.reduce(createObject,{});
-  const bestFriendName = personDetails[name].bestFriendName;
-  const bfFatherName = personDetails[bestFriendName].fatherName;
-  const bfMotherName = personDetails[bestFriendName].motherName;
-  return [bfFatherName,bfMotherName];
+const parentsNameOfBF = function(personName, personDetails) {
+  const person = personDetails.reduce(updateFriendsDetails, {});
+  const bestFriendName = person[personName].bestFriendName;
+  const bfFatherName = person[bestFriendName].fatherName;
+  const bfMotherName = person[bestFriendName].motherName;
+  return [bfFatherName, bfMotherName];
 };
 
 exports.parentsNameOfBF = parentsNameOfBF;
