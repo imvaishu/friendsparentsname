@@ -1,0 +1,19 @@
+{
+  "name": "parentsnameofbf",
+  "version": "1.0.0",
+  "description": "it gives bestFriends parents name",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nyc mocha",
+    "start": "node main.js",
+    "mochaVersion": "mocha --version"
+  },
+  "devDependencies": {
+    "mocha": "6.2.0"
+  },
+  "author": "vaishnavi yadav",
+  "license": "ISC"
+}

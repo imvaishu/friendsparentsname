@@ -10,4 +10,5 @@ describe("parentsNameOfBF", function() {
     const expectedvalue = ["Rajender", "Tejinder"];
     const actualValue = parentsNameOfBF("Priyanshu", personDetails);
     assert.deepStrictEqual(actualValue, expectedvalue);
-  })
+  });
+});
